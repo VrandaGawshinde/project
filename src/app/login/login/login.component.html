@@ -1,0 +1,38 @@
+<div class="row text-left">
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">Login</h4>
+      </div>
+      <div class="card-content">
+        <div class="card-body">
+          <form [formGroup]="regularForm" (ngSubmit)="onReactiveFormSubmit()" novalidate>
+            <div class="form-group">
+              <label for="inputEmail">Email</label>
+
+              <input type="email" class="form-control" id="inputEmail" formControlName="inputEmail" required>
+              <small class="form-text text-muted danger"
+                *ngIf="!regularForm.get('inputEmail').valid && (regularForm.get('inputEmail').dirty || regularForm.get('inputEmail').touched)">Please
+                enter a valid email!</small>
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+
+              <input type="password" class="form-control" id="password" formControlName="password" required>
+              <small class="form-text text-muted danger"
+                *ngIf="!regularForm.get('password').valid && (regularForm.get('password').dirty || regularForm.get('password').touched)">Password
+                characters length must be between 4 and 24 !</small>
+            </div>
+              <div *ngIf="isError">
+                <small class="form-text text-muted danger">Invalid Credentials</small>
+              </div>
+            <div class="form-group text-right">
+              <button type="reset" class="btn btn-danger btn-raised mr-1">Cancel</button>
+              <button type="submit" class="btn btn-success btn-raised" [disabled]="!regularForm.valid">Sign-In</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

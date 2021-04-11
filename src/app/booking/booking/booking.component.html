@@ -1,0 +1,67 @@
+<div class="row text-left">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header pb-2">
+        <h4 class="card-title" id="bordered-layout-basic-form">Book a Table</h4>
+        <p class="mb-0">Experience the premium dining, superb hospitality and the world-class management and facilities, in a relaxed environment. We look forward to welcoming you with our friendly, personalised service.</p>
+      </div>
+      <div class="card-content">
+        <div class="px-3">
+          <form [formGroup]="regularForm" (ngSubmit)="onReactiveFormSubmit()" novalidate class="form form-horizontal form-bordered">
+            <div class="form-group">
+              <h4 class="form-section"><i class="ft-user"></i> Personal Info</h4>
+              <div class="form-group row">
+                <label class="col-md-3 label-control" for="name">Name</label>
+                <div class="col-md-9">
+                  <input type="text" id="name" class="form-control" placeholder="Name" formControlName="name" required>
+                  <small class="form-text text-muted danger"
+                *ngIf="!regularForm.get('name').valid && (regularForm.get('name').dirty || regularForm.get('name').touched)">This filed is required!</small>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 label-control" for="contact">Contact</label>
+                <div class="col-md-9">
+                  <input type="number" id="contact" class="form-control" placeholder="Contact" formControlName="contact" required>
+                  <small class="form-text text-muted danger"
+                *ngIf="!regularForm.get('contact').valid && (regularForm.get('contact').dirty || regularForm.get('contact').touched)">This filed is required!</small>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 label-control" for="members">Members</label>
+                <div class="col-md-9">
+                  <input type="number" id="members" class="form-control" placeholder="Members" formControlName="members" required>
+                  <small class="form-text text-muted danger"
+                *ngIf="!regularForm.get('members').valid && (regularForm.get('members').dirty || regularForm.get('members').touched)">This field is required!</small>
+                </div>
+              </div>   
+              <div class="form-group row">
+                <label class="col-md-3 label-control" for="time">Time</label>
+                <div class="col-md-9">
+                  <input type="time" id="time" class="form-control" placeholder="Time of Arrival" formControlName="time" required>
+                  <small class="form-text text-muted danger"
+                *ngIf="!regularForm.get('time').valid && (regularForm.get('time').dirty || regularForm.get('time').touched)">This field is required!</small>
+                </div>
+              </div>         
+              <div class="form-group row">
+                <label class="col-md-3 label-control" for="date">Date</label>
+                <div class="col-md-9">
+                  <input type="date" id="date" class="form-control" placeholder="Date" formControlName="date" required>
+                  <small class="form-text text-muted danger"
+                *ngIf="!regularForm.get('date').valid && (regularForm.get('date').dirty || regularForm.get('date').touched)">This field is required!</small>
+                </div>
+              </div>        
+            </div>
+          
+
+            <div class="form-actions">
+              <button type="button" class="btn btn-raised btn-warning mr-1">
+                <i class="ft-x"></i> Cancel
+              </button>
+              <button type="submit" class="btn btn-success btn-raised" [disabled]="!regularForm.valid">Save</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
