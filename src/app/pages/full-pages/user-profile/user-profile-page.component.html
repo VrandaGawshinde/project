@@ -23,43 +23,15 @@
                     <div class="col-5">                        
                     </div>                    
                 </div>
-                <div class="profile-cover-buttons">
-                    <div class="media-body halfway-fab align-self-end">
-                        <div class="text-right d-none d-sm-none d-md-none d-lg-block">
-                            <button type="button" class="btn btn-primary btn-raised mr-2"><i class="fa fa-plus"></i> Follow</button>
-                            <button type="button" class="btn btn-success btn-raised mr-3"><i class="fa fa-dashcube"></i> Message</button>
-                        </div>
-                        <div class="text-right d-block d-sm-block d-md-block d-lg-none">
-                            <button type="button" class="btn btn-primary btn-raised mr-2"><i class="fa fa-plus"></i></button>
-                            <button type="button" class="btn btn-success btn-raised mr-3"><i class="fa fa-dashcube"></i></button>
-                        </div>
-                    </div>
-                </div>
                 <div class="profile-section">
                     <div class="row">
                         <div class="col-lg-5 col-md-5 ">
-                            <ul class="profile-menu no-list-style">
-                                <li>
-                                    <a (click)="showPage('About')" [ngClass]="currentPage === 'About' ? 'primary font-medium-2 font-weight-600 active' : 'primary font-medium-2 font-weight-600'">About</a>
-                                </li>
-                                <li>
-                                    <a (click)="showPage('TimeLine')" [ngClass]="currentPage === 'TimeLine' ? 'primary font-medium-2 font-weight-600 active' : 'primary font-medium-2 font-weight-600'">Timeline</a>
-                                </li>
-                            </ul>
                         </div>
                         <div class="col-lg-2 col-md-2 text-center">
                             <span class="font-medium-2 text-uppercase">{{user.name}}</span>
-                            <p class="grey font-small-2">Ninja Developer</p>
+                            <p class="grey font-small-2">My-Profile</p>
                         </div>
                         <div class="col-lg-5 col-md-5">
-                            <ul class="profile-menu no-list-style">
-                                <li>
-                                    <a (click)="showPage('Friends')" [ngClass]="currentPage === 'Friends' ? 'primary font-medium-2 font-weight-600 active' : 'primary font-medium-2 font-weight-600'">Friends</a>
-                                </li>
-                                <li>
-                                    <a (click)="showPage('Photos')" [ngClass]="currentPage === 'Photos' ? 'primary font-medium-2 font-weight-600 active' : 'primary font-medium-2 font-weight-600'">Photos</a>
-                                </li>
-                            </ul>
                         </div>
                     </div>
                 </div>
@@ -86,13 +58,6 @@
                     <div class="card-body">
                         <div class="mb-3">
                             <span class="text-bold-500 primary">About Me:</span>
-                            <span class="d-block overflow-hidden">Hi, I’m Jose, I’m 29 and I work as a Ninja Developer for the
-                                “PIXINVENT” Creative Studio. In my research, I follow the flow of early medieval slavery from viking 
-                                raids in the west, through the booming ports of the Scandinavian north, and out into the Islamic world.
-                                Reading texts against the grain and seeing artifacts as traces of the past can make their lives once 
-                                again visible to us today. This website documents my efforts to do just that, and I hope it will prove 
-                                a resource and an inspiration for others in similar pursuits.
-                            </span>
                         </div>
                         <hr>
                         <div class="row">
@@ -100,7 +65,7 @@
                                 <ul class="no-list-style">
                                     <li class="mb-2">
                                         <span class="text-bold-500 primary"><a><i class="icon-present font-small-3"></i> Birthday:</a></span>
-                                        <span class="d-block overflow-hidden">June 10th, 1988</span>
+                                        <span class="d-block overflow-hidden">{{user.birthdate}}</span>
                                     </li>
                                     <li class="mb-2">
                                         <span class="text-bold-500 primary"><a><i class="ft-map-pin font-small-3"></i> Birthplace:</a></span>

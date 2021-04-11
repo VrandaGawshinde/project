@@ -11,7 +11,7 @@ import { FooterComponent } from "./footer/footer.component";
 import { NavbarComponent } from "./navbar/navbar.component";
 import { SidebarComponent } from "./sidebar/sidebar.component";
 import { CustomizerComponent } from './customizer/customizer.component';
-import { NotificationSidebarComponent } from './notification-sidebar/notification-sidebar.component';
+
 
 //DIRECTIVES
 import { ToggleFullscreenDirective } from "./directives/toggle-fullscreen.directive";
@@ -28,7 +28,6 @@ import { SidebarToggleDirective } from './directives/sidebartoggle.directive';
         NavbarComponent,
         SidebarComponent,
         CustomizerComponent,
-        NotificationSidebarComponent,
         ToggleFullscreenDirective,
         SidebarDirective,
         NgbModule,
@@ -46,7 +45,6 @@ import { SidebarToggleDirective } from './directives/sidebartoggle.directive';
         NavbarComponent,
         SidebarComponent,
         CustomizerComponent,
-        NotificationSidebarComponent,
         ToggleFullscreenDirective,
         SidebarDirective,
         SidebarLinkDirective,

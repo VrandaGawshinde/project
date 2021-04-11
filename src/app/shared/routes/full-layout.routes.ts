@@ -11,10 +11,6 @@ export const Full_ROUTES: Routes = [
     path: 'calendar',
     loadChildren: () => import('../../calendar/calendar.module').then(m => m.CalendarsModule)
   },
-  {
-    path: 'charts',
-    loadChildren: () => import('../../charts/charts.module').then(m => m.ChartsNg2Module)
-  },
    {
     path: 'forms',
     loadChildren: () => import('../../forms/forms.module').then(m => m.FormModule)
@@ -31,10 +27,7 @@ export const Full_ROUTES: Routes = [
     path: 'datatables',
     loadChildren: () => import('../../data-tables/data-tables.module').then(m => m.DataTablesModule)
   },
-  {
-    path: 'uikit',
-    loadChildren: () => import('../../ui-kit/ui-kit.module').then(m => m.UIKitModule)
-  },
+  
   {
     path: 'components',
     loadChildren: () => import('../../components/ui-components.module').then(m => m.UIComponentsModule)
@@ -50,23 +43,6 @@ export const Full_ROUTES: Routes = [
   {
     path: 'colorpalettes',
     loadChildren: () => import('../../color-palette/color-palette.module').then(m => m.ColorPaletteModule)
-  },
-  {
-    path: 'chat',
-    loadChildren: () => import('../../chat/chat.module').then(m => m.ChatModule)
-  },
-  {
-    path: 'chat-ngrx',
-    loadChildren: () => import('../../chat-ngrx/chat-ngrx.module').then(m => m.ChatNGRXModule)
-  },
-  {
-    path: 'inbox',
-    loadChildren: () => import('../../inbox/inbox.module').then(m => m.InboxModule)
-  },
-
-  {
-    path: 'player',
-    loadChildren: () => import('../../player/player.module').then(m => m.PlayerModule)
   },
   {
     path: 'login',
